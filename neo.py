@@ -25,8 +25,8 @@ if __name__ == '__main__':
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
 	while True:
-		index = sys.argv[0]
-		args = sys.argv[1].split(',')
+		index = sys.argv[1]
+		args = sys.argv[2].split(',')
 		print(sys.argv)
 		strip.setPixelColor(index, Color(args[0], args[1], args[2]))
 		strip.show()
