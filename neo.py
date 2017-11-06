@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
 		color = Color(0,0,255)
 		print color
-		strip.setPixelColor(index, color)
+		strip.setPixelColor(index, Color(0,0,255))
 		strip.show()
 		time.sleep(1.0)
 
