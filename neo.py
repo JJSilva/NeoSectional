@@ -19,13 +19,14 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
 #def setcolor(i, g, r, b):
-	#"""light up one pixel."""
-strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
-strip.begin()
-print ('Press Ctrl-C to quit.')
-	while True:
-		strip.setPixelColor(i, Color(int(g), int(r), int(b)))
-		strip.show()
-		time.sleep(1.0)
+#"""light up one pixel."""
+if __name__ == '__main__':
+	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+	strip.begin()
+	print ('Press Ctrl-C to quit.')
+		while True:
+			strip.setPixelColor(i, Color(int(g), int(r), int(b)))
+			strip.show()
+			time.sleep(1.0)
 
 
