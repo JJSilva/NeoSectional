@@ -15,15 +15,15 @@ $pos = strpos($content, $start);
 if ($pos === false) {
     echo "The string '$start' was not found in the string ";
 } else {
-    echo "The string '$start' was found in the string ";
-    echo " and exists at position $pos";
+ /**   echo "The string '$start' was found in the string ";
+    echo " and exists at position $pos";*/
 }
 $pos2 = strpos($content, $end);
 if ($pos2 === false) {
     echo "The string '$end' was not found in the string ";
 } else {
-    echo "The string '$end' was found in the string ";
-    echo " and exists at position $pos2";
+  /**  echo "The string '$end' was found in the string ";
+    echo " and exists at position $pos2"; */
 }
 $count1 = $pos2-$pos;
 echo "count: ";
