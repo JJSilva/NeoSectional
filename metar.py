@@ -4,6 +4,7 @@ import time
 from neopixel import *
 import sys
 import neo
+import subprocess
 import os
 
 
