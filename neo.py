@@ -39,7 +39,7 @@ if __name__ == '__main__':
 		print sys.argv
 		print color
 		
-		setthecolor(index,color)
+		setthecolor(strip, index,color)
 
 		#strip.setPixelColor(index, color)
 		#strip.show()
