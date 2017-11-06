@@ -96,7 +96,7 @@ for metar in metars.iter('flight_category'):
 
 	print "Setting light " + str(i) + " to " + flightCateory + " " + color
 	rgb = color.split(',')
-	neo.setcolor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
+	neo.setcolor(i, int(rgb[0]), int(rgb[1]), int(rgb[2]))
 
 	#strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	#strip.begin()
