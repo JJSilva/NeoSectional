@@ -99,8 +99,8 @@ for metar in metars.iter('flight_category'):
 	rgb = color.split(',')
 	script = "sudo python neo.py " + str(i) + " " + color
 	print script
-	os.system(script)
 	i += 1
+	os.system(script)
 print "fin"
 
 
