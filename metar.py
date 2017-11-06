@@ -81,27 +81,26 @@ metars = ET.fromstring(content)
 i = 0
 color = "0,0,0"
 
-while True:
-	for metar in metars.iter('flight_category'):
-		flightCateory = metar.text
 
-		if flightCateory == "VFR":
-			color = "255,0,0"
-		elif flightCateory == "MVFR":
-			color = "0,0,255"
-		elif flightCateory == "IFR":
-			color = "0,255,0"
-		elif flightCateory == "LIFR":
-			color = "0,125,125"	
-		else:
-			color = "255,255,255"
-
-		print "Setting light " + str(i) + " to " + flightCateory + " " + color
-		rgb = color.split(',')
-		script = "sudo python neo.py " + str(i) + " " + rgb[0] + "," + rgb[1] + "," + rgb[2] # + " &"
-		print script
-		os.system(script)
-		i += 1
+for metar in metars.iter('flight_category'):
+	flightCateory = metar.text
+	if flightCateory == "VFR":
+		color = "255,0,0"
+	elif flightCateory == "MVFR":
+		color = "0,0,255"
+	elif flightCateory == "IFR":
+		color = "0,255,0"
+	elif flightCateory == "LIFR":
+		color = "0,125,125"	
+	else:
+		color = "255,255,255"
+	
+	print "Setting light " + str(i) + " to " + flightCateory + " " + color
+	rgb = color.split(',')
+	script = "sudo python neo.py " + str(i) + " " + rgb[0] + "," + rgb[1] + "," + rgb[2] # + " &"
+	print script
+	os.system(script)
+	i += 1
 print "fin"
 
 
