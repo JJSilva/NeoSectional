@@ -91,7 +91,7 @@ for airportcode in airportlist:
 
 print (url)
 content = urllib2.urlopen(url).read()
-print content
+print (content)
 
 
 metars = ET.fromstring(content)
@@ -116,7 +116,7 @@ for metar in metars.iter('flight_category'):
 		color = "255,255,255"
 
 
-	print "Setting light " + str(i) + " to " + flightCateory + " " + color
+	print("Setting light " + str(i) + " to " + flightCateory + " " + color)
 
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
@@ -129,7 +129,7 @@ for metar in metars.iter('flight_category'):
 
 	i += 1
 
-print "fin"
+print (fin)
 
 
 
