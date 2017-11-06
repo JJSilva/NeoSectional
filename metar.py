@@ -3,7 +3,6 @@ import xml.etree.ElementTree as ET
 import time
 from neopixel import *
 import sys
-import asyncio
 
 
 # LED strip configuration:
