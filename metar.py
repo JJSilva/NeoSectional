@@ -89,7 +89,7 @@ for airportcode in airportlist:
 	url = url + airportcode + ","
 
 
-print url
+print (url)
 content = urllib2.urlopen(url).read()
 print content
 
