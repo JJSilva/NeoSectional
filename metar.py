@@ -18,9 +18,18 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
+
+
+
+async def setcolor(strip, rgb, wait_ms=50):
+	while True:
+        await asyncio.sleep(1)        
+        strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
+		strip.show()
+
+
+
 url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString="
-
-
 
 airportlist = []
 airportlist.append("kmry")
@@ -123,13 +132,6 @@ for metar in metars.iter('flight_category'):
 print "fin"
 
 
-
-
-async def setcolor(strip, rgb, wait_ms=50):
-	while True:
-        await asyncio.sleep(1)        
-        strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
-		strip.show()
 
 
 
