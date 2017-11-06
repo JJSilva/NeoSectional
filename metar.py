@@ -37,27 +37,27 @@ print content
 
 metars = ET.fromstring(content)
 
-print "poop"
+
 i = 0
-status = "0,0,0"
+color = "0,0,0"
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
 
 	if flightCateory == "VFR":
-		status = "0,255,0"
+		color = "0,255,0"
 	elif flightCateory == "MVFR":
-		status = "255,0,255"
+		color = "255,0,255"
 	elif flightCateory == "IFR":
-		status = "255,0,0"
+		color = "255,0,0"
 	else:
-		status = "0,0,0"
+		color = "0,0,0"
 
 
-	print flightCateory + status
+	print "Setting light" + int(i) + " to " + flightCateory + " " color
 
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
-	strip.setPixelColor(1, status)
+	strip.setPixelColor(1, color)
 	strip.show()
 	time.sleep(wait_ms/1000.0)
 	i += 1
