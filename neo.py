@@ -32,7 +32,7 @@ if __name__ == '__main__':
 		print sys.argv
 		print color
 		
-		strip.setPixelColor(index, 0,0,255)
+		strip.setPixelColor(index, color)
 		strip.show()
 		time.sleep(1.0)
 
