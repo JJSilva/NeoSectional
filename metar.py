@@ -64,7 +64,7 @@ for metar in metars.iter('flight_category'):
 	print rgb[2]
 	strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
 	strip.show()
-	time.sleep(wait_ms/1000.0)
+	time.sleep(100.0)
 	i += 1
 
 
