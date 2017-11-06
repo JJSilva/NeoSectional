@@ -92,14 +92,18 @@ color = "0,0,0"
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
 
+
+
 	if flightCateory == "VFR":
-		color = "0,255,0"
-	elif flightCateory == "MVFR":
-		color = "255,0,255"
-	elif flightCateory == "IFR":
 		color = "255,0,0"
+	elif flightCateory == "MVFR":
+		color = "0,0,255"
+	elif flightCateory == "IFR":
+		color = "0,255,0"
+	elif flightCateory == "LIFR":
+		color = "0,125,125"	
 	else:
-		color = "0,0,0"
+		color = "255,255,255"
 
 
 	print "Setting light " + str(i) + " to " + flightCateory + " " + color
