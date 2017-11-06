@@ -30,9 +30,8 @@ if __name__ == '__main__':
 		print sys.argv
 		print args
 		
-		#color Color(int(args[0]),int(args[1]),int(args[2]))
+		color = Color(int(args[0]),int(args[1]),int(args[2]))
 
-		color = Color(0,255,255)
 		print color
 		strip.setPixelColor(index, Color(125,125,125))
 		strip.show()
