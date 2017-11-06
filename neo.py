@@ -17,11 +17,11 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
 
-def setthecolor(strip, color, wait_ms=50):
+#def setthecolor(strip, color, wait_ms=50):#
 	"""Wipe color across display a pixel at a time."""
-	stip.setPixelColor(i, Color(0,0,0))
-	strip.show()
-	time.sleep(wait_ms/1000.0)
+	#strip.setPixelColor(i, Color(0,0,0))
+	#strip.show()
+	#time.sleep(wait_ms/1000.0)
 
 
 
@@ -39,10 +39,10 @@ if __name__ == '__main__':
 		print sys.argv
 		print color
 		
-		setthecolor(index,color,50)
+		#setthecolor(index,color,50)
 
-		#strip.setPixelColor(index, color)
-		#strip.show()
-		#time.sleep(1.0)
+		strip.setPixelColor(index, Color(0,0,0))
+		strip.show()
+		time.sleep(1.0)
 
 
