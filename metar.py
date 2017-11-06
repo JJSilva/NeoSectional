@@ -101,7 +101,7 @@ for metar in metars.iter('flight_category'):
 	script = "sudo python neo.py " + str(i) + " " + color
 	print script
 	i += 1
-	subprocess.call(script, shell=True)
+	subprocess.popen(script)
 	#os.system(script)
 print "fin"
 
