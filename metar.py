@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 import time
 from neopixel import *
 import sys
+import asyncio
 
 
 # LED strip configuration:
@@ -112,12 +113,23 @@ for metar in metars.iter('flight_category'):
 	strip.begin()
 	rgb = color.split(',')
 	
-	strip.show()
+	loop = asyncio.get_event_loop()
+	cors = asyncio.wait([setcolor()])
+	loop.run_until_complete(cors)
+
+
 	i += 1
-	while True:
-		strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
 
 print "fin"
+
+
+
+
+async def setcolor(strip, rgb, wait_ms=50):
+	while True:
+        await asyncio.sleep(1)        
+        strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
+		strip.show()
 
 
 
