@@ -18,13 +18,13 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
 
-def yanon(i, g, r, b):
+def setcolor(i, g, r, b):
 	"""light up one pixel."""
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
 	while True:
-		strip.setPixelColor(i, Color(g, r, b)
+		strip.setPixelColor(i, Color(g), Color(r), Color(b))
 		strip.show()
 		time.sleep(1.0)
 
