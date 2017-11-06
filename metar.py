@@ -23,8 +23,8 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 async def setcolor(strip, rgb, wait_ms=50):
 	while True:
-        await asyncio.sleep(1)        
-        strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
+		await asyncio.sleep(1)
+		strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
 		strip.show()
 
 
