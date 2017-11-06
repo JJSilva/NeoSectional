@@ -59,6 +59,9 @@ for metar in metars.iter('flight_category'):
 	strip.begin()
 
 	rgb = color.split(',')
+	print rgb[0]
+	print rgb[1]
+	print rgb[2]
 	strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
 	strip.show()
 	time.sleep(wait_ms/1000.0)
