@@ -20,16 +20,16 @@ if __name__ == '__main__':
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
-	while True:
-		i = sys.argv[1]
-		args = sys.argv[2].split(',')
-		color = Color(int(args[0]),int(args[1]),int(args[2]))
+	#while True:
+	i = sys.argv[1]
+	args = sys.argv[2].split(',')
+	color = Color(int(args[0]),int(args[1]),int(args[2]))
 
-		print sys.argv
-		print color
-		
-		strip.setPixelColor(int(i),color)
-		strip.show()
-		time.sleep(1.0)
+	print sys.argv
+	print color
+
+	strip.setPixelColor(int(i),color)
+	strip.show()
+	time.sleep(1.0)
 
 
