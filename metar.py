@@ -80,6 +80,11 @@ metars = ET.fromstring(content)
 
 i = 0
 color = "0,0,0"
+
+
+strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+strip.begin()
+
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
 
