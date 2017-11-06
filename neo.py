@@ -16,17 +16,6 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
-
-def setthecolor(strip, i, color, wait_ms=50):
-	print "123123"
-	strip.setPixelColor(i, color)
-	strip.show()
-	time.sleep(wait_ms/1000.0)
-
-
-
-#def setcolor(i, g, r, b):
-#"""light up one pixel."""
 if __name__ == '__main__':
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
@@ -39,8 +28,6 @@ if __name__ == '__main__':
 		print sys.argv
 		print color
 		
-		#setthecolor(strip,i,color)
-
 		strip.setPixelColor(int(i),color)
 		strip.show()
 		time.sleep(1.0)
