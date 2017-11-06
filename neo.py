@@ -17,9 +17,9 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
 
-def setthecolor(strip, index, color, wait_ms=50):
+def setthecolor(strip, i, color, wait_ms=50):
 	print "123123"
-	strip.setPixelColor(index, color)
+	strip.setPixelColor(i, color)
 	strip.show()
 	time.sleep(wait_ms/1000.0)
 
@@ -32,14 +32,14 @@ if __name__ == '__main__':
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
 	while True:
-		index = sys.argv[1]
+		i = sys.argv[1]
 		args = sys.argv[2].split(',')
 		color = Color(int(args[0]),int(args[1]),int(args[2]))
 
 		print sys.argv
 		print color
 		
-		setthecolor(strip, index,color)
+		setthecolor(strip,i,color)
 
 		#strip.setPixelColor(index, color)
 		#strip.show()
