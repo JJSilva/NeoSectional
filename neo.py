@@ -31,8 +31,9 @@ if __name__ == '__main__':
 		print args
 		print args[0]
 		print args[1]
-		print str(args[2])
+		print args[2]
 		color Color(Color(int(args[0]), int(args[1]), int(args[2])))
+		print color
 		strip.setPixelColor(index, color)
 		strip.show()
 		time.sleep(1.0)
