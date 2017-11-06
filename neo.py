@@ -28,7 +28,6 @@ if __name__ == '__main__':
 		index = sys.argv[1]
 		args = sys.argv[2].split(',')
 		print sys.argv
-		print args
 		
 		color = Color(int(args[0]),int(args[1]),int(args[2]))
 
