@@ -27,6 +27,7 @@ if __name__ == '__main__':
 	while True:
 		index = sys.argv[1]
 		args = sys.argv[2].split(',')
+		print "yo"
 		print sys.argv
 		
 		color = Color(int(args[0]),int(args[1]),int(args[2]))
