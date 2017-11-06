@@ -57,9 +57,7 @@ for metar in metars.iter('flight_category'):
 
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
-	rgb = color.split(',')
-
-	strip.setPixelColor(i, rgb[0], rgb[1], rgb[2])
+	strip.setPixelColor(i, color)
 	strip.show()
 	time.sleep(wait_ms/1000.0)
 	i += 1
