@@ -41,7 +41,7 @@ if __name__ == '__main__':
 		
 		#setthecolor(strip,i,color)
 
-		strip.setPixelColor(i,i,"#FF00FF")
+		strip.setPixelColor(i,"#FF00FF")
 		strip.show()
 		time.sleep(1.0)
 
