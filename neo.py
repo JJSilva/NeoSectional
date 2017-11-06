@@ -30,6 +30,6 @@ if __name__ == '__main__':
 
 	strip.setPixelColor(int(i),color)
 	strip.show()
-	time.sleep(1.0)
+
 
 
