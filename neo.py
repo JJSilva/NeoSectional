@@ -39,9 +39,9 @@ if __name__ == '__main__':
 		print sys.argv
 		print color
 		
-		setthecolor(strip,i,color)
+		#setthecolor(strip,i,color)
 
-		strip.setPixelColor(i,"#FF00FF")
+		strip.setPixelColor(int(i),"#FF00FF")
 		strip.show()
 		time.sleep(1.0)
 
