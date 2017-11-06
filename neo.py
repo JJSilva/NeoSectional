@@ -27,7 +27,7 @@ if __name__ == '__main__':
 	while True:
 		index = sys.argv[0]
 		args = sys.argv[1].split(',')
-		print index + " " + args[0] + " " args[1] + " " + args[2]
+		print index + " " + args[0] + " " + args[1] + " " + args[2]
 		strip.setPixelColor(index, Color(args[0], args[1], args[2]))
 		strip.show()
 		time.sleep(1.0)
