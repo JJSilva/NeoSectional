@@ -32,9 +32,9 @@ if __name__ == '__main__':
 		
 		#color Color(int(args[0]),int(args[1]),int(args[2]))
 
-		color = Color(0,0,255)
+		color = Color(0,255,255)
 		print color
-		strip.setPixelColor(index, Color(0,0,255))
+		strip.setPixelColor(index, Color(125,125,125))
 		strip.show()
 		time.sleep(1.0)
 
