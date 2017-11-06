@@ -67,6 +67,8 @@ for metar in metars.iter('flight_category'):
 	time.sleep(1.0)
 	i += 1
 
+print "fin"
+
 
 
 
