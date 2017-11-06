@@ -24,7 +24,7 @@ def setcolor(i, g, r, b):
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
 	while True:
-		strip.setPixelColor(i, Color(g), Color(r), Color(b))
+		strip.setPixelColor(i, Color(int(g), int(r), int(b))
 		strip.show()
 		time.sleep(1.0)
 
