@@ -85,7 +85,7 @@ airportlist.append("kavx")
 
 
 for airportcode in airportlist:
-	print "airportcode"
+	print 'airportcode'
 	url = url + airportcode + ","
 
 
