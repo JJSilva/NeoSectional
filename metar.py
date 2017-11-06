@@ -81,7 +81,7 @@ metars = ET.fromstring(content)
 i = 0
 color = "0,0,0"
 
-while True;
+while True:
 	for metar in metars.iter('flight_category'):
 		flightCateory = metar.text
 
