@@ -25,6 +25,9 @@ if __name__ == '__main__':
 	strip.begin()
 	print ('Press Ctrl-C to quit.')
 	while True:
+		print i
+		index = sys.argv[0]
+		args = sys.argv[1].split(',')
 		strip.setPixelColor(i, Color(int(g), int(r), int(b)))
 		strip.show()
 		time.sleep(1.0)
