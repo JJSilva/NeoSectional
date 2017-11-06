@@ -20,15 +20,6 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 
 
-
-async def setcolor(strip, rgb, wait_ms=50):
-	while True:
-		await asyncio.sleep(1)
-		strip.setPixelColor(i, Color(int(rgb[0]), int(rgb[1]), int(rgb[2])))
-		strip.show()
-
-
-
 url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString="
 
 airportlist = []
@@ -85,13 +76,13 @@ airportlist.append("kavx")
 
 
 for airportcode in airportlist:
-	print('airportcode')
+	print airportcode
 	url = url + airportcode + ","
 
 
-print (url)
+print url
 content = urllib2.urlopen(url).read()
-print (content)
+print content
 
 
 metars = ET.fromstring(content)
@@ -116,7 +107,7 @@ for metar in metars.iter('flight_category'):
 		color = "255,255,255"
 
 
-	print("Setting light " + str(i) + " to " + flightCateory + " " + color)
+	print "Setting light " + str(i) + " to " + flightCateory + " " + color
 
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	strip.begin()
@@ -129,7 +120,7 @@ for metar in metars.iter('flight_category'):
 
 	i += 1
 
-print (fin)
+print "fin"
 
 
 
