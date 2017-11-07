@@ -303,9 +303,9 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 
 while True:
-	range = sys.argv[1]
-	print "range" + str(range)	
-	for x in range(0, range):
+	count = sys.argv[1]
+	print "count: " + str(count)	
+	for x in range(0, count):
 		who = sys.argv[2].split(',')
 		neo1(x, strip, Color(int(who[0]), int(who[1]), int(who[2])))
 
