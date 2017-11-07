@@ -305,7 +305,7 @@ if __name__ == '__main__':
 while True:
 	count = int(sys.argv[1])
 	print "count: " + str(count)	
-	for x in range(0, count):
+	for x in range(0, int(count)):
 		who = sys.argv[2].split(',')
 		neo1(x, strip, Color(int(who[0]), int(who[1]), int(who[2])))
 
