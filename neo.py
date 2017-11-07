@@ -289,7 +289,6 @@ def neo50(strip, color, wait_ms=50):
 
 def neo(index, strip, color, wait_ms=50):
 	"""light up one pixel."""
-	print "index: " + str(index) 
 	strip.setPixelColor(int(index), color)
 	strip.show()
 	time.sleep(wait_ms/1000.0)		
