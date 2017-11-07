@@ -303,7 +303,7 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 
 while True:
-	count = sys.argv[1]
+	count = int(sys.argv[1])
 	print "count: " + str(count)	
 	for x in range(0, count):
 		who = sys.argv[2].split(',')
