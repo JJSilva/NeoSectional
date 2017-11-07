@@ -97,6 +97,7 @@ for metar in metars.iter('flight_category'):
 		color = "255,255,255"
 	print "Setting light " + str(i) + " " + flightCateory + " " + color
 	args = args + " " + color
+	print args
 	i = i+1
 script = "sudo python neo.py " + str(i) + " " + args
 print script
