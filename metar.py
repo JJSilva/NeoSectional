@@ -82,6 +82,8 @@ metars = ET.fromstring(content)
 i = 0
 color = "0,0,0"
 
+args = ""
+
 
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
@@ -96,13 +98,12 @@ for metar in metars.iter('flight_category'):
 	else:
 		color = "255,255,255"
 	
-	print "Setting light " + str(i) + " to " + flightCateory + " " + color
-	rgb = color.split(',')
-	script = "sudo python neo.py " + str(i) + " " + color
-	print script
-	i += 1
-	subprocess.call(script, shell=True)
-	#os.system(script)
+	print "Setting light " + metar + " to " + flightCateory + " " + color
+	args = args + " " + color
+
+script = "sudo python neo.py " + args
+print script
+os.system(script)	
 print "fin"
 
 
