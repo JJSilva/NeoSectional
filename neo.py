@@ -390,12 +390,12 @@ while True:
 		neo42(strip, Color(int(who42[0]), int(who42[1]), int(who42[2])))
 		neo43(strip, Color(int(who43[0]), int(who43[1]), int(who43[2])))
 		neo44(strip, Color(int(who44[0]), int(who44[1]), int(who44[2])))
-		neo45(strip, Color(int(who45[0]), int(who45[1]), int(who45[2])))
-		neo46(strip, Color(int(who46[0]), int(who46[1]), int(who46[2])))
-		neo47(strip, Color(int(who47[0]), int(who47[1]), int(who47[2])))
-		neo48(strip, Color(int(who48[0]), int(who48[1]), int(who48[2])))
-		neo49(strip, Color(int(who49[0]), int(who49[1]), int(who49[2])))
-		neo50(strip, Color(int(who50[0]), int(who50[1]), int(who50[2])))
+		#neo45(strip, Color(int(who45[0]), int(who45[1]), int(who45[2])))
+		#neo46(strip, Color(int(who46[0]), int(who46[1]), int(who46[2])))
+		#neo47(strip, Color(int(who47[0]), int(who47[1]), int(who47[2])))
+		#neo48(strip, Color(int(who48[0]), int(who48[1]), int(who48[2])))
+		#neo49(strip, Color(int(who49[0]), int(who49[1]), int(who49[2])))
+		#neo50(strip, Color(int(who50[0]), int(who50[1]), int(who50[2])))
 		
 
 
