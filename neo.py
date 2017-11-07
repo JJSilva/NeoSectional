@@ -295,6 +295,8 @@ if __name__ == '__main__':
 	
 	strip.begin()
 while True:
+		print ('Press Ctrl-C to quit.')
+		
 		who1 = sys.argv[1].split(',')
 		who2 = sys.argv[2].split(',')
 		who3 = sys.argv[3].split(',')
