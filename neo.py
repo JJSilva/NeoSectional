@@ -20,7 +20,7 @@ def neo(index, strip, color, wait_ms=50):
 	"""light up one pixel."""
 	strip.setPixelColor(int(index), color)
 	strip.show()
-	time.sleep(wait_ms/1000.0)		
+	#time.sleep(wait_ms/1000.0)		
 
 if __name__ == '__main__':
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
 	print ('Press Ctrl-C to quit.')
 
 while True:
-	count = int(sys.argv[1])
+	count = int(sys.argv[1] -1)
 	#print "count: " + str(count)	
 	for x in range(0, int(count)):
 		who = sys.argv[2].split(',')
