@@ -13,9 +13,9 @@ url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=
 
 airportlist = []
 airportlist.append("kmry")
-airportlist.append("KVDO")
+airportlist.append("kprb")
 airportlist.append("kpsp")
-airportlist.append("09CA")
+airportlist.append("khaf")
 
 
 #airportlist.append("kwvi")
