@@ -24,11 +24,11 @@ url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=
 
 
 airportlist = []
-airportlist.append("kmry")
-airportlist.append("kprb")
-airportlist.append("kpsp")
-airportlist.append("kdhn")
-airportlist.append("kuox")
+airportlist.append("TWH")
+airportlist.append("L11")
+airportlist.append("KWJF")
+airportlist.append("KVNY")
+airportlist.append("KTRM")
 
 
 #airportlist.append("kwvi")
@@ -79,9 +79,17 @@ airportlist.append("kuox")
 
 
 
+with open("data") as f:
+    airports = f.readlines()
+# you may also want to remove whitespace characters like `\n` at the end of each line
+airports = [x.strip() for x in airports]
+print airports 
 
 
-for airportcode in airportlist:
+
+
+
+for airportcode in airports:
 	print airportcode
 	url = url + airportcode + ","
 
