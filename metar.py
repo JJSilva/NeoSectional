@@ -23,62 +23,6 @@ url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=
 
 
 
-airportlist = []
-airportlist.append("TWH")
-airportlist.append("L11")
-airportlist.append("KWJF")
-airportlist.append("KVNY")
-airportlist.append("KTRM")
-
-
-#airportlist.append("kwvi")
-#airportlist.append("ke16")
-#airportlist.append("krhv")
-#airportlist.append("ksjc")
-#airportlist.append("knuq")
-#airportlist.append("kpao")
-#airportlist.append("ksql")
-#airportlist.append("khaf")
-#airportlist.append("khaf")
-#airportlist.append("ksfo")
-#airportlist.append("khwd")
-#airportlist.append("koak")
-#airportlist.append("klvk")
-#airportlist.append("kc83")
-#airportlist.append("ksba")
-#airportlist.append("koxr")
-#airportlist.append("kcma")
-#airportlist.append("kwhp")
-#airportlist.append("kvny")
-#airportlist.append("kbur")
-#airportlist.append("ksmd")
-#airportlist.append("klax")
-#airportlist.append("khhr")
-#airportlist.append("kemt")
-#airportlist.append("kpoc")
-#airportlist.append("kcno")
-#airportlist.append("kral")
-#airportlist.append("ktoa")
-#airportlist.append("klgb")
-#airportlist.append("kful")
-#airportlist.append("ksna")
-#airportlist.append("ksli")
-#airportlist.append("kf70")
-#airportlist.append("kl35")
-#airportlist.append("kpsp")
-#airportlist.append("ktrm")
-#airportlist.append("ksdm")
-#airportlist.append("ksee")
-#airportlist.append("kokb")
-#airportlist.append("kcrq")
-#airportlist.append("krnm")
-#airportlist.append("kmyf")
-#airportlist.append("krnm")
-#airportlist.append("ksan")
-#airportlist.append("kavx")
-
-
-
 with open("data") as f:
     airports = f.readlines()
 # you may also want to remove whitespace characters like `\n` at the end of each line
