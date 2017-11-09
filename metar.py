@@ -54,7 +54,7 @@ for airportcode in airports:
 			print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
 			strip.setPixelColor(i, color)
 			strip.show()
-	 except ValueError:
+	except ValueError:
 	 	color = Color(255,255,255)
 	 	strip.setPixelColor(i, color)
 		strip.show()
