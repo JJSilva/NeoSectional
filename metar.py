@@ -35,7 +35,7 @@ for airportcode in airports:
 
 	try:
 		content = urllib2.urlopen(url).read()
-		print content
+		#print content
 		metars = ET.fromstring(content)
 
 		for metar in metars.iter('flight_category'):
