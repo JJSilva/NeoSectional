@@ -18,7 +18,7 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 
 def neo(strip, color, wait_ms=50):
 	"""light up one pixel."""
-	strip.setPixelColor(int(index), color)
+	strip.setPixelColor(0, color)
 	strip.show()
 	time.sleep(wait_ms/1000.0)		
 
