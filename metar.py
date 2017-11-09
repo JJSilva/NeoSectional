@@ -18,7 +18,7 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 		
 
-with open("data") as f:
+with open("airports") as f:
     airports = f.readlines()
 airports = [x.strip() for x in airports]
 print airports 
