@@ -27,7 +27,7 @@ airportlist = []
 airportlist.append("kmry")
 airportlist.append("kprb")
 airportlist.append("kpsp")
-airportlist.append("khyr")
+airportlist.append("kdhn")
 
 
 #airportlist.append("kwvi")
