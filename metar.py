@@ -59,7 +59,7 @@ try:
 			color = Color(0,128,128)
 		print "Setting light " + airportcode + " " + str(i) + " " + flightCateory + " " + str(color)
 		strip.setPixelColor(i, color)
-		time.sleep(0.1)
+		
 
 		strip.show()
 		i = i + 1
