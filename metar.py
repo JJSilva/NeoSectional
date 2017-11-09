@@ -122,7 +122,7 @@ for metar in metars.iter('flight_category'):
 	blue = color.split(",")[2]
 
 	print green + " " + red + " " + blue
-	strip.setPixelColor(i, int(green), int(red), int(blue))
+	strip.setPixelColor(i, Color((int(green), int(red), int(blue))))
 
 	strip.show()
 	i = i+1
