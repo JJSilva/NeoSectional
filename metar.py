@@ -30,7 +30,7 @@ i = 0
 
 for airportcode in airports:
 	print airportcode
-	url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString=" + airportcode
+	url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=1&stationString=" + airportcode
 	print url
 	content = urllib2.urlopen(url).read()
 	print content
