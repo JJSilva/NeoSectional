@@ -16,7 +16,7 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 			
 
-def neo(index, strip, color, wait_ms=50):
+def neo(strip, color, wait_ms=50):
 	"""light up one pixel."""
 	strip.setPixelColor(int(index), color)
 	strip.show()
@@ -38,4 +38,4 @@ while True:
 	red = int(color[1])
 	blue = int(color[2])
 	#print "count: " + str(count)	
-	neo(strip, Color(green,red,blue))
+	neo(strip, Color(green,red,blue))	
