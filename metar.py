@@ -57,7 +57,7 @@ try:
 			color = Color(0,255,0)
 		elif flightCateory == "LIFR":
 			color = Color(0,128,128)
-		print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
+		print "Setting light " + airportcode + " " + str(i) + " " + flightCateory + " " + str(color)
 		strip.setPixelColor(i, color)
 		time.sleep(0.1)
 
