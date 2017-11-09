@@ -31,6 +31,8 @@ print airports
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 strip.begin()
 
+i = 0
+
 for airportcode in airports:
 	print airportcode
 	url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString=" + airportcode
@@ -40,9 +42,6 @@ for airportcode in airports:
 
 
 	metars = ET.fromstring(content)
-
-
-	i = 0
 
 	for metar in metars.iter('flight_category'):
 		flightCateory = metar.text
@@ -58,8 +57,11 @@ for airportcode in airports:
 		print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
 		strip.setPixelColor(i, color)
 		strip.show()
-		i = i+1
 
+
+
+
+	i = i+1
 print "fin"
 
 
