@@ -19,7 +19,6 @@ LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 		
 
 
-url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString="
 
 
 
@@ -34,7 +33,7 @@ strip.begin()
 
 for airportcode in airports:
 	print airportcode
-	url = url + airportcode + ","
+	url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString=" + airportcode
 	print url
 	content = urllib2.urlopen(url).read()
 	print content
