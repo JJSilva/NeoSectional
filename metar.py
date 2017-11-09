@@ -43,6 +43,7 @@ i = 0
 try:
 	content = urllib2.urlopen(url).read()
 	#print content
+	print content
 	metars = ET.fromstring(content)
 
 	for metar in metars.iter('flight_category'):
@@ -59,6 +60,7 @@ try:
 		print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
 		strip.setPixelColor(i, color)
 		strip.show()
+		i = i + 1
 
 except ValueError:
 	print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
@@ -68,7 +70,6 @@ except ValueError:
 
 
 
-	i = i+1
 print "fin"
 
 
