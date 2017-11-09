@@ -112,7 +112,7 @@ for metar in metars.iter('flight_category'):
 	else:
 		color = Color(255,255,255)
 
-	print "Setting light " + str(i) + " " + flightCateory + " " + color 
+	print "Setting light " + str(i) + " " + flightCateory 
 
 
 	print color
