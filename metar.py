@@ -54,7 +54,7 @@ for metar in root.iter('METAR'):
 	print stationId + " " + flightCateory
 	
 	mydict[stationId] = flightCateory
-	#color = Color(0,0,0)
+	
 	
 
 print mydict
@@ -62,6 +62,8 @@ print mydict
 i = 0
 for airportcode in airports:
 	print 
+	color = Color(0,0,0)
+
 	flightCateory = mydict.get(airportcode,"No")
 	print airportcode + " " + flightCateory
 
@@ -69,23 +71,23 @@ for airportcode in airports:
 		
 		if flightCateory == "VFR":
 			print "VFR"
-		#color = Color(255,0,0)
+			color = Color(255,0,0)
 		elif flightCateory == "MVFR":
-		#	color = Color(0,0,255)
+			color = Color(0,0,255)
 			print "MVFR"
 		elif flightCateory == "IFR":
-		#	color = Color(0,255,0)
+			color = Color(0,255,0)
 			print "IFR"
 		elif flightCateory == "LIFR":
-			#color = Color(0,128,128)
+			color = Color(0,128,128)
 			print "LIFR"
 	else:
-		#color = Color(255,255,255)
+		color = Color(255,255,255)
 		print "N/A"
 
 	print "Setting light " + str(i) + " for " + airportcode + " " + flightCateory + " " #+ str(color)
-	#strip.setPixelColor(i, color)
-	#strip.show()
+	strip.setPixelColor(i, color)
+	strip.show()
 	
 	i = i+1
 print
