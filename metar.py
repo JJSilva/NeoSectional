@@ -28,10 +28,10 @@ strip.begin()
 
 
 
+url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString="
 
 for airportcode in airports:
 	print airportcode
-	url = "https://aviationweather.gov/adds/dataserver_current/httpparam?datasource=metars&requestType=retrieve&format=xml&mostRecentForEachStation=constraint&hoursBeforeNow=1&stationString="
 	url = url + airportcode + ","
 
 print url
