@@ -31,8 +31,6 @@ print airports
 
 
 
-
-
 for airportcode in airports:
 	print airportcode
 	url = url + airportcode + ","
