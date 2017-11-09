@@ -41,7 +41,7 @@ print content
 metars = ET.fromstring(content)
 
 i = 0
-flightCateory = tree.find(".//flight_category").text
+flightCateory = metars.find(".//flight_category").text
 color = Color(0,0,0)
 if flightCateory == "VFR":
 	color = Color(255,0,0)
