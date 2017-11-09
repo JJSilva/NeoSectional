@@ -100,7 +100,7 @@ i = 0
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
 	color = Color(255,255,255)
-
+	print flightCateory
 	if flightCateory == "VFR":
 		color = Color(0,255,0)
 	elif flightCateory == "MVFR":
