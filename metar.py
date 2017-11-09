@@ -115,11 +115,13 @@ for metar in metars.iter('flight_category'):
 
 	print "Setting light " + str(i) + " " + flightCateory + " " + color 
 
-	strip.setPixelColor(i, color)
+
 
 	green = color.split(",")[0]
 	red = color.split(",")[1]
 	blue = color.split(",")[2]
+
+	strip.setPixelColor(i, int(green), int(red), int(blue))
 
 	strip.show()
 	i = i+1
