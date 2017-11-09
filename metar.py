@@ -92,9 +92,6 @@ print content
 metars = ET.fromstring(content)
 
 
-color = "0,0,0"
-
-
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 strip.begin()
 
@@ -102,37 +99,37 @@ i = 0
 
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
+	Color color
+
 	if flightCateory == "VFR":
-		color = "255,0,0"
+		color.green = 255
+		color.red = 0
+		color.blue = 0
 	elif flightCateory == "MVFR":
-		color = "0,0,255"
+		color.green = 0
+		color.red = 0
+		color.blue = 255
 	elif flightCateory == "IFR":
-		color = "0,255,0"
+		color.green = 0
+		color.red = 255
+		color.blue = 0
 	elif flightCateory == "LIFR":
-		color = "0,125,125"	
+		color.green = 0
+		color.red = 125
+		color.blue = 125
 	else:
-		color = "255,255,255"
+		color.green = 255
+		color.red = 255
+		color.blue = 255
 
 	print "Setting light " + str(i) + " " + flightCateory + " " + color 
 
 
-
-	green = color.split(",")[0]
-	red = color.split(",")[1]
-	blue = color.split(",")[2]
-
-	print green + " " + red + " " + blue
-
 	print Color(int(green), int(red), int(blue))
-	strip.setPixelColor(i, Color(int(green), int(red), int(blue)))
-
+	strip.setPixelColor(i, color)
 	strip.show()
 	i = i+1
 
-
-script = "sudo python neo.py " + str(total) + " " + args
-print script
-os.system(script)	
 print "fin"
 
 
