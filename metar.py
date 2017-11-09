@@ -55,10 +55,11 @@ for airportcode in airports:
 		color = Color(0,128,128)
 	print "Setting light " + airportcode + " " + str(i) + " " + flightCateory + " " + str(color)
 	strip.setPixelColor(i, color)
+	strip.show()
+	i = i + 1
 
 
-strip.show()
-i = i + 1
+
 
 
 
