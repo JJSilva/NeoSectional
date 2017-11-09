@@ -100,7 +100,7 @@ i = 0
 for metar in metars.iter('flight_category'):
 	flightCateory = metar.text
 	color = Color(255,255,255)
-	print flightCateory
+
 	if flightCateory == "VFR":
 		color = Color(0,255,0)
 	elif flightCateory == "MVFR":
@@ -114,8 +114,6 @@ for metar in metars.iter('flight_category'):
 
 	print "Setting light " + str(i) + " " + flightCateory 
 
-
-	print color
 	strip.setPixelColor(i, color)
 	strip.show()
 	i = i+1
