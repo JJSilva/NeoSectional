@@ -104,7 +104,7 @@ for metar in metars.iter('flight_category'):
 	if flightCateory == "VFR":
 		color = Color(255,0,0)
 	elif flightCateory == "MVFR":
-		color = Color(0,0,255)
+		color = Color(0,255,0)
 	elif flightCateory == "IFR":
 		color = Color(255,0,0)
 	elif flightCateory == "LIFR":
