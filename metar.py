@@ -43,24 +43,22 @@ metars = ET.fromstring(content)
 i = 0
 
 for airportcode in airports:
-		
-	for metar in metars.iter('flight_category'):
-		flightCateory = metar.text
-		color = Color(0,0,0)
-		if flightCateory == "VFR":
-			color = Color(255,0,0)
-		elif flightCateory == "MVFR":
-			color = Color(0,0,255)
-		elif flightCateory == "IFR":
-			color = Color(0,255,0)
-		elif flightCateory == "LIFR":
-			color = Color(0,128,128)
-		print "Setting light " + airportcode + " " + str(i) + " " + flightCateory + " " + str(color)
-		strip.setPixelColor(i, color)
-		
+	flightCategory = metars.iter('flight_category').text:
+	color = Color(0,0,0)
+	if flightCateory == "VFR":
+		color = Color(255,0,0)
+	elif flightCateory == "MVFR":
+		color = Color(0,0,255)
+	elif flightCateory == "IFR":
+		color = Color(0,255,0)
+	elif flightCateory == "LIFR":
+		color = Color(0,128,128)
+	print "Setting light " + airportcode + " " + str(i) + " " + flightCateory + " " + str(color)
+	strip.setPixelColor(i, color)
+	
 
-		strip.show()
-		i = i + 1
+	strip.show()
+	i = i + 1
 
 
 
