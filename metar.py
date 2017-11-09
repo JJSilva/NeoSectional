@@ -34,11 +34,13 @@ print airports
 for airportcode in airports:
 	print airportcode
 	url = url + airportcode + ","
+	print url
+	content = urllib2.urlopen(url).read()
+	print content
+	
 
 
-print url
-content = urllib2.urlopen(url).read()
-print content
+
 
 metars = ET.fromstring(content)
 
