@@ -109,8 +109,7 @@ for metar in metars.iter('flight_category'):
 		color = Color(255,0,0)
 	elif flightCateory == "LIFR":
 		color = Color(128,0,128)
-	else:
-		color = Color(0,0,0)
+	
 
 	print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
 
