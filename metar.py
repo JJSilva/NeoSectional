@@ -59,6 +59,8 @@ try:
 			color = Color(0,128,128)
 		print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
 		strip.setPixelColor(i, color)
+		time.sleep(i/10.0)
+
 		strip.show()
 		i = i + 1
 
