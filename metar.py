@@ -43,6 +43,8 @@ metars = ET.fromstring(content)
 i = 0
 
 for airportcode in airports:
+	airport = metars.find(".//" + airport).text
+	print airport
 	flightCateory = metars.find(".//flight_category").text
 	color = Color(0,0,0)
 	if flightCateory == "VFR":
