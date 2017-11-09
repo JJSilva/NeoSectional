@@ -28,6 +28,7 @@ airportlist.append("kmry")
 airportlist.append("kprb")
 airportlist.append("kpsp")
 airportlist.append("kdhn")
+airportlist.append("kuox")
 
 
 #airportlist.append("kwvi")
