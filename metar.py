@@ -36,8 +36,6 @@ for airportcode in airports:
 	try:
 		content = urllib2.urlopen(url).read()
 		print content
-
-
 		metars = ET.fromstring(content)
 
 		for metar in metars.iter('flight_category'):
@@ -55,6 +53,7 @@ for airportcode in airports:
 			strip.setPixelColor(i, color)
 			strip.show()
 	except ValueError:
+		print "Error: No " + str(i) + " invalid."
 	 	color = Color(255,255,255)
 	 	strip.setPixelColor(i, color)
 		strip.show()
