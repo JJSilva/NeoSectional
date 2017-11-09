@@ -29,7 +29,8 @@ with open("data") as f:
 airports = [x.strip() for x in airports]
 print airports 
 
-
+strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+strip.begin()
 
 for airportcode in airports:
 	print airportcode
@@ -39,19 +40,14 @@ for airportcode in airports:
 	print content
 
 
-
-
-
 	metars = ET.fromstring(content)
-	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
-	strip.begin()
+
 
 	i = 0
 
 	for metar in metars.iter('flight_category'):
 		flightCateory = metar.text
 		color = Color(0,0,0)
-
 		if flightCateory == "VFR":
 			color = Color(255,0,0)
 		elif flightCateory == "MVFR":
@@ -60,15 +56,12 @@ for airportcode in airports:
 			color = Color(0,255,0)
 		elif flightCateory == "LIFR":
 			color = Color(0,128,128)
-		
-
 		print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
-
 		strip.setPixelColor(i, color)
 		strip.show()
 		i = i+1
 
-	print "fin"
+print "fin"
 
 
 
