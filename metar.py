@@ -37,7 +37,8 @@ for airportcode in airports:
 		content = urllib2.urlopen(url).read()
 		print content
 		metars = ET.fromstring(content)
-		flightCateory = root[6][0][18].text #flight_category
+		
+		flightCateory = metars[6][0][18].text #flight_category
 		color = Color(0,0,0)
 		if flightCateory == "VFR":
 			color = Color(255,0,0)
