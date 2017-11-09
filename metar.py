@@ -59,6 +59,7 @@ airportlist.append("kmyf")
 airportlist.append("krnm")
 airportlist.append("ksan")
 airportlist.append("kavx")
+airportlist.append("kpsp")
 
 
 
