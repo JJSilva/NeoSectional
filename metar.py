@@ -35,17 +35,15 @@ for airportcode in airports:
 	url = url + airportcode + ","
 
 print url
-
-
+content = urllib2.urlopen(url).read()
+#print content
+print content
+metars = ET.fromstring(content)
 
 i = 0
 
-try:
-	content = urllib2.urlopen(url).read()
-	#print content
-	print content
-	metars = ET.fromstring(content)
-
+for airportcode in airports:
+		
 	for metar in metars.iter('flight_category'):
 		flightCateory = metar.text
 		color = Color(0,0,0)
@@ -63,12 +61,6 @@ try:
 
 		strip.show()
 		i = i + 1
-
-except ValueError:
-	print "Setting light " + str(i) + " " + flightCateory + " " + str(color)
- 	color = Color(255,255,255)
- 	strip.setPixelColor(i, color)
-	strip.show()
 
 
 
