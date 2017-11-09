@@ -41,9 +41,8 @@ print content
 metars = ET.fromstring(content)
 
 i = 0
-
-for airportcode in airports:
-	flightCategory = metars.iter('flight_category').text:
+for metar in metars.iter('flight_category'):
+	flightCateory = metar.text
 	color = Color(0,0,0)
 	if flightCateory == "VFR":
 		color = Color(255,0,0)
