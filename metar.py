@@ -81,7 +81,7 @@ print content
 metars = ET.fromstring(content)
 
 
-total = 1
+total = 0
 color = "0,0,0"
 
 args = ""
