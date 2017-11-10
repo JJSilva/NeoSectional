@@ -97,6 +97,6 @@ if __name__ == '__main__':
 	#theaterChase(strip, Color(127,   0,   0))  # Red theater chase
 	#theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
 	print ('Rainbow animations.')
-	#rainbow(strip)
-	rainbowCycle(strip)
+	rainbow(strip)
+	#rainbowCycle(strip)
 	#theaterChaseRainbow(strip)
