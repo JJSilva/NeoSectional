@@ -25,7 +25,7 @@ strip.begin()
 
 
 
-with open("airports") as f:
+with open("/NeoSectional/airports") as f:
     airports = f.readlines()
 airports = [x.strip() for x in airports]
 print airports 
