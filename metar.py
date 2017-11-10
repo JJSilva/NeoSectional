@@ -36,6 +36,8 @@ mydict = {
 
 url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=1&stationString="
 for airportcode in airports:
+	if airportcode == "NULL":
+		continue
 	print airportcode
 	url = url + airportcode + ","
 
@@ -61,6 +63,8 @@ print mydict
 
 i = 0
 for airportcode in airports:
+	if airportcode == "NULL":
+		continue
 	print 
 	color = Color(0,0,0)
 
