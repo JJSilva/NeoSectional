@@ -44,6 +44,7 @@ for j in range(256*3):
 		time.sleep(2/1000.0)
 
 
+strip.begin()
 
 
 
