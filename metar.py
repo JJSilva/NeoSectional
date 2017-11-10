@@ -18,15 +18,31 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 		
 
-with open("airports") as f:
-    airports = f.readlines()
-airports = [x.strip() for x in airports]
-print airports 
+
 
 strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 strip.begin()
 
 
+
+
+
+
+for j in range(256*3):
+		for i in range(strip.numPixels()):
+			strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+		strip.show()
+		time.sleep(2/1000.0)
+
+
+
+
+
+
+with open("airports") as f:
+    airports = f.readlines()
+airports = [x.strip() for x in airports]
+print airports 
 
 
 mydict = {
