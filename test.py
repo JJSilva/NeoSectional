@@ -51,7 +51,7 @@ def wheel(pos):
 		pos -= 170
 		return Color(0, pos * 3, 255 - pos * 3)
 
-def rainbow(strip, wait_ms=20, iterations=1):
+def rainbow(strip, wait_ms=2, iterations=1):
 	"""Draw rainbow that fades across all pixels at once."""
 	for j in range(256*iterations):
 		for i in range(strip.numPixels()):
@@ -97,6 +97,6 @@ if __name__ == '__main__':
 	#theaterChase(strip, Color(127,   0,   0))  # Red theater chase
 	#theaterChase(strip, Color(  0,   0, 127))  # Blue theater chase
 	print ('Rainbow animations.')
-	rainbow(strip)
-	#rainbowCycle(strip)
+	#rainbow(strip)
+	rainbowCycle(strip)
 	#theaterChaseRainbow(strip)
