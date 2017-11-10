@@ -37,7 +37,7 @@ def wheel(pos):
 
 
 
-for j in range(256*3):
+for j in range(256*1):
 		for i in range(strip.numPixels()):
 			strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
 		strip.show()
