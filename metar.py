@@ -37,14 +37,7 @@ def wheel(pos):
 
 
 
-for j in range(256*3):
-		for i in range(strip.numPixels()):
-			strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
-		strip.show()
-		time.sleep(2/1000.0)
 
-
-strip.begin()
 
 
 
@@ -53,6 +46,19 @@ with open("airports") as f:
     airports = f.readlines()
 airports = [x.strip() for x in airports]
 print airports 
+
+
+
+for airportcode in airports:
+	for j in range(256*3):
+		for i in range(strip.numPixels()):
+			strip.setPixelColor(i, wheel((int(i * 256 / strip.numPixels()) + j) & 255))
+		strip.show()
+		time.sleep(2/1000.0)
+
+strip.begin()
+
+
 
 
 mydict = {
