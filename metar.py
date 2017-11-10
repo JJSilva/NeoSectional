@@ -64,6 +64,7 @@ print mydict
 i = 0
 for airportcode in airports:
 	if airportcode == "NULL":
+		i = i +1
 		continue
 	print 
 	color = Color(0,0,0)
