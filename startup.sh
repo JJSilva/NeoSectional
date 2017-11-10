@@ -1,1 +1,1 @@
-sudo python /NeoSectional/test.py >> log.txt
+sudo python /NeoSectional/metar.py
