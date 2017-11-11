@@ -45,7 +45,7 @@ if __name__ == '__main__':
 	# Create NeoPixel object with appropriate configuration.
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
 	# Intialize the library (must be called once before other functions).
-	time.sleep(10)
+	#time.sleep(10)
 	strip.begin()
 	print ('Rainbow animations.')
 	rainbowCycle(strip)
