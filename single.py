@@ -31,7 +31,6 @@ if __name__ == '__main__':
 	
 	print ('Welcome, Press Ctrl-C to quit.')
 
-while True:
 	strip.begin()
 	index = sys.argv[1]
 
