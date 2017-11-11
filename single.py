@@ -16,11 +16,11 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 			
 
-def neo(strip, color, wait_ms=50):
+def neo(strip, index, color, wait_ms=50):
 	"""light up one pixel."""
 	strip.setPixelColor(0, color)
 	strip.show()
-	time.sleep(wait_ms/1000.0)		
+	#time.sleep(wait_ms/1000.0)		
 
 if __name__ == '__main__':
 	strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
@@ -29,13 +29,15 @@ if __name__ == '__main__':
 	print sys.argv
 	
 	
-	print ('Press Ctrl-C to quit.')
+	print ('Welcome, Press Ctrl-C to quit.')
 
 while True:
 	strip.begin()
-	color = sys.argv[1].split(",")
+	index = sys.argv[1]
+
+	color = sys.argv[2].split(",")
 	green = int(color[0])
 	red = int(color[1])
 	blue = int(color[2])
 	#print "count: " + str(count)	
-	neo(strip, Color(green,red,blue))	
+	neo(strip, index, Color(green,red,blue))	
