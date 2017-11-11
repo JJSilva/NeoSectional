@@ -28,7 +28,7 @@ strip.begin()
 for i in range(LED_COUNT):
 		strip.setPixelColor(i, Color(255,255,255))
 		strip.show()
-		time.sleep(1)
+		time.sleep(20/1000)
 
 
 
