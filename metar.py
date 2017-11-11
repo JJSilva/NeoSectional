@@ -36,7 +36,7 @@ mydict = {
 }
 
 
-url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=8&stationString="
+url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=1&stationString="
 for airportcode in airports:
 	if airportcode == "NULL":
 		continue
