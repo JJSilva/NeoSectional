@@ -57,7 +57,10 @@ for metar in root.iter('METAR'):
 	stationId = metar.find('station_id').text
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
-	mydict[stationId] = flightCateory
+	if stationId in mydict:
+		print "duplicate, only save first metar"	
+	else:
+		mydict[stationId] = flightCateory
 	
 	
 
