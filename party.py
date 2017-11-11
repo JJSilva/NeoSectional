@@ -47,6 +47,6 @@ if __name__ == '__main__':
 	# Intialize the library (must be called once before other functions).
 	#time.sleep(10)
 	strip.begin()
+	print ('Rainbow animations.')
 	while True:
-		print ('Rainbow animations.')
 		rainbowCycle(strip)
