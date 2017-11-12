@@ -31,7 +31,7 @@ def wheel(pos):
 		pos -= 170
 		return Color(0, pos * 3, 255 - pos * 3)
 
-def rainbowCycle(strip, wait_ms=10, iterations=5):
+def rainbowCycle(strip, wait_ms=50, iterations=5):
 	"""Draw rainbow that uniformly distributes itself across all pixels."""
 	for j in range(256*iterations):
 		for i in range(strip.numPixels()):
