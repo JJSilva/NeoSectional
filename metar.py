@@ -31,7 +31,7 @@ airports = [x.strip() for x in airports]
 print airports 
 
 
-key = open('/NeoSectional/key', 'r').read()
+key = open('/NeoSectional/key', 'r').read().rstrip()
 
 
 url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
@@ -46,7 +46,6 @@ print url
 
 #opener.addheaders = headers
 
-print key
 print key
 
 req = urllib2.Request(url)
