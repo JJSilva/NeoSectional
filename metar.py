@@ -47,6 +47,8 @@ print url
 
 #opener.addheaders = headers
 
+req = urllib2.Request(url)
+
 req.add_header('X-API-Key',key)
 req.add_header('Accept', 'application/xml')
 
