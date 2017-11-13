@@ -45,13 +45,13 @@ for airportcode in airports:
 
 print url
 
-opener = urllib2.build_opener()
-
 #opener.addheaders = headers
-opener.addheaders = [('X-API-Key',key), ('Accept', 'application/xml')]
-print opener.headers
 
-content = opener.open(url).read()
+req.add_header('X-API-Key',key)
+req.add_header('Accept', 'application/xml')
+
+
+content = req.open(url).read()
 
 #content = urllib2.urlopen(url).read()
 print content
