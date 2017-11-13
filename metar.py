@@ -38,7 +38,7 @@ url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
 for airportcode in airports:
 	if airportcode == "NULL":
 		continue
-	print airportcode
+	#print airportcode
 	#url = url + airportcode + ","
 #url = url[:-1]
 
