@@ -52,10 +52,7 @@ req = urllib2.Request(url)
 req.add_header('X-API-Key',key)
 req.add_header('Accept', 'application/xml')
 
-
-content = req.open(url).read()
-
-#content = urllib2.urlopen(url).read()
+content = urllib2.urlopen(req).read()
 print content
 
 
