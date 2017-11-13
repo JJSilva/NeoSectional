@@ -31,8 +31,7 @@ airports = [x.strip() for x in airports]
 print airports 
 
 
-with open ("/NeoSectional/key", "r") as keyFile:
-    key=keyFile.readlines()
+key = open('/NeoSectional/key', 'r').read()
 
 print key
 
