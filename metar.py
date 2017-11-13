@@ -1,9 +1,10 @@
 import urllib2
 import xml.etree.ElementTree as ET
 import time
-from neopixel import *
+#from neopixel import *
 import sys
 import os
+
 
 
 # LED strip configuration:
@@ -15,15 +16,13 @@ LED_DMA        = 5       # DMA channel to use for generating signal (try 5)
 LED_BRIGHTNESS = 255     # Set to 0 for darkest and 255 for brightest
 LED_INVERT     = False   # True to invert the signal (when using NPN transistor level shift)
 LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
-LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
+#LED_STRIP      = ws.WS2811_STRIP_GRB   # Strip type and colour ordering
 		
 
 
 
-strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
-
-
-strip.begin()
+#strip = Adafruit_NeoPixel(LED_COUNT, LED_PIN, LED_FREQ_HZ, LED_DMA, LED_INVERT, LED_BRIGHTNESS, LED_CHANNEL, LED_STRIP)
+#strip.begin()
 
 
 with open("/NeoSectional/airports") as f:
@@ -32,30 +31,46 @@ airports = [x.strip() for x in airports]
 print airports 
 
 
-mydict = {
-	"":""
-}
+with open ("/NeoSectional/key", "r") as keyFile:
+    key=keyFile.readlines()
 
 
-url = "https://www.aviationweather.gov/adds/dataserver_current/httpparam?dataSource=metars&requestType=retrieve&format=xml&hoursBeforeNow=1.5&stationString="
+url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
 for airportcode in airports:
 	if airportcode == "NULL":
 		continue
 	print airportcode
-	url = url + airportcode + ","
+	#url = url + airportcode + ","
+#url = url[:-1]
 
 print url
-content = urllib2.urlopen(url).read()
+
+opener = urllib2.build_opener()
+
+#opener.addheaders = headers
+opener.addheaders = [('X-API-Key',key), ('Accept', 'application/xml')]
+
+
+content = opener.open(url).read()
+
+#content = urllib2.urlopen(url).read()
 print content
 
 
 root = ET.fromstring(content)
 
 
-for metar in root.iter('METAR'):
+
+mydict = {
+	"":""
+}
+
+
+for metar in root.iter('metar'):
 	if airportcode == "NULL":
 		continue
-	stationId = metar.find('station_id').text
+
+	stationId = metar.find('icao').text
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
 	if stationId in mydict:
