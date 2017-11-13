@@ -49,7 +49,7 @@ opener = urllib2.build_opener()
 
 #opener.addheaders = headers
 opener.addheaders = [('X-API-Key',key), ('Accept', 'application/xml')]
-
+print opener.headers
 
 content = opener.open(url).read()
 
