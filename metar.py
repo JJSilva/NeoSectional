@@ -34,13 +34,17 @@ print airports
 key = open('/NeoSectional/key', 'r').read().rstrip()
 
 
-url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
+url = "https://api.checkwx.com/metar/"
 for airportcode in airports:
 	if airportcode == "NULL":
 		continue
-	#print airportcode
-	#url = url + airportcode + ","
-#url = url[:-1]
+	print airportcode
+	url = url + airportcode + ","
+
+url = url[:-1]
+
+url = url + "/decoded" 
+
 
 print url
 
