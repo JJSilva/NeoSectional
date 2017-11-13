@@ -33,7 +33,6 @@ print airports
 
 key = open('/NeoSectional/key', 'r').read()
 
-print key
 
 url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
 for airportcode in airports:
@@ -47,11 +46,16 @@ print url
 
 #opener.addheaders = headers
 
+print key
+print key
+
 req = urllib2.Request(url)
 
-print req.headers
 req.add_header('X-API-Key',key)
 req.add_header('Accept', 'application/xml')
+print req.headers
+
+
 
 content = urllib2.urlopen(req).read()
 print content
