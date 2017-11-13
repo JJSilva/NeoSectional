@@ -34,6 +34,7 @@ print airports
 with open ("/NeoSectional/key", "r") as keyFile:
     key=keyFile.readlines()
 
+print key
 
 url = "https://api.checkwx.com/metar/KLGB,KSNA/decoded" #add xml header
 for airportcode in airports:
