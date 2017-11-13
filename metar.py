@@ -46,6 +46,8 @@ url = url[:-1]
 url = url + "/decoded" 
 
 
+
+
 print url
 
 #opener.addheaders = headers
