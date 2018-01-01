@@ -56,6 +56,7 @@ for metar in root.iter('METAR'):
 	if airportcode == "NULL":
 		continue
 	stationId = metar.find('station_id').text
+	print station_id
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
 	if stationId in mydict:
