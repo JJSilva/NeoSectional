@@ -56,7 +56,7 @@ for metar in root.iter('METAR'):
 	if airportcode == "NULL":
 		continue
 	print "yo"
-	print metar.find('station_id')
+	print metar.find('station_id').text
 	stationId = metar.find('station_id').text
 	print stationId
 	flightCateory = metar.find('flight_category').text
