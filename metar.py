@@ -57,7 +57,10 @@ for metar in root.iter('METAR'):
 		continue
 	stationId = metar.find('station_id').text
 	print stationId
-	print metar.find('flight_category')
+	if metar.find('flight_category') is None:
+		print "Skipping"
+	
+
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
 	if stationId in mydict:
