@@ -59,7 +59,7 @@ for metar in root.iter('METAR'):
 	print stationId
 	if metar.find('flight_category') is None:
 		print "Skipping"
-	
+		continue
 
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
