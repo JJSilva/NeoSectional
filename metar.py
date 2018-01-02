@@ -55,10 +55,9 @@ root = ET.fromstring(content)
 for metar in root.iter('METAR'):
 	if airportcode == "NULL":
 		continue
-	print "yo"
-	print metar.find('station_id').text
 	stationId = metar.find('station_id').text
 	print stationId
+	print metar.find('flight_category')
 	flightCateory = metar.find('flight_category').text
 	print stationId + " " + flightCateory
 	if stationId in mydict:
